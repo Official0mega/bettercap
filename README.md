@@ -1,3 +1,66 @@
+# Command Line Installation Guide
+Install BetterCAP:
+
+# You can install BetterCAP using the following commands:
+
+sudo apt update
+sudo apt install bettercap
+Check the Version:
+
+# After installation, verify that BetterCAP is installed correctly by checking its version:
+
+
+bettercap --version
+Start BetterCAP:
+
+# To start BetterCAP, you can use the following command:
+
+
+sudo bettercap
+
+# By default, BetterCAP will start in interactive mode, where you can enter commands. You will see a prompt like bettercap >.
+
+# Capture Traffic:
+
++ BetterCAP provides various modules to perform different tasks. One common use case is capturing network traffic. You can use the net.probe module to sniff and analyze network traffic.
+
++ For example, to capture HTTP traffic on your local network, use the following command:
+
+
+bettercap -iface <your-network-interface> -eval "set net.sniff.verbose true; set net.sniff.output /path/to/output.log; net.sniff on"
+Replace <your-network-interface> with the name of your network interface (e.g., eth0, wlan0).
+
+# Interact with Modules:
+
+# While BetterCAP is running, you can interact with its modules using the interactive prompt. For example, to view available modules, type:
+
+net.show
+
+# To load a module, use the net.use command followed by the module name.
+
+# Execute MITM Attacks (Optional):
+
+# BetterCAP can be used for various Man-in-the-Middle (MITM) attacks, such as ARP spoofing or DNS spoofing. Be aware that using MITM attacks on networks you don't own or have explicit permission to test can be illegal and unethical.
+
+# View Results:
+
+# BetterCAP allows you to save captured data or results to files. You can use these files for further analysis.
+
+# Exit BetterCAP:
+
+# To exit BetterCAP, simply type exit at the interactive prompt.
+
+# Explore Documentation:
+
+# BetterCAP has extensive documentation that covers various modules and use cases. You can access the documentation by visiting the official BetterCAP GitHub repository and the official documentation.
+
+#### Stay Legal and Ethical:
+
+# Always ensure that you have proper authorization and legal permission before using BetterCAP on any network. Unauthorized use can have serious legal consequences.
+
+
+
+
 <p align="center">
   <img alt="BetterCap" src="https://raw.githubusercontent.com/bettercap/media/master/logo.png" height="140" />
   <p align="center">
